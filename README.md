@@ -12,7 +12,13 @@ All of the projects will be added to this repository as I complete them.
 
 **Project 1 & 2**
 
-![demo](http://s15.postimg.org/hx6ahhrnf/Project1_And2.gif)
+![demo1&2](http://s15.postimg.org/hx6ahhrnf/Project1_And2.gif)
+
+
+**Project 3**
+
+![demo3](http://s21.postimg.org/fqs9zib7b/Project_3.gif)
+
 
 **Notes:**
 - Project 1 & 2: Merged together!
