@@ -20,5 +20,10 @@ All of the projects will be added to this repository as I complete them.
 ![demo3](http://s21.postimg.org/fqs9zib7b/Project_3.gif)
 
 
+**Project 4**
+
+![demo4](http://s16.postimg.org/jbheexpgl/Project_4.gif)
+
+
 **Notes:**
 - Project 1 & 2: Merged together!
