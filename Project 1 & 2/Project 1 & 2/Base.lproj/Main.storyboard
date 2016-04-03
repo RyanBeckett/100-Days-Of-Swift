@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Project_1___2" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Counter" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gx1-Su-hMp">
+                                <rect key="frame" x="156" y="28" width="62" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TrM-A2-awu">
+                                <rect key="frame" x="137" y="364" width="100" height="30"/>
+                                <state key="normal" title="Tap or Hold"/>
+                                <connections>
+                                    <action selector="btnTapOrHoldPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="1iW-s1-8hS"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="10" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mm6-2C-xCj">
+                                <rect key="frame" x="137" y="284" width="100" height="72"/>
+                                <fontDescription key="fontDescription" name="Avenir-Light" family="Avenir" pointSize="52"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="0qb-34-MD5">
+                                <rect key="frame" x="20" y="24" width="46" height="30"/>
+                                <state key="normal">
+                                    <attributedString key="attributedTitle">
+                                        <fragment content="Reset">
+                                            <attributes>
+                                                <font key="NSFont" size="15" name="HelveticaNeue"/>
+                                            </attributes>
+                                        </fragment>
+                                    </attributedString>
+                                </state>
+                                <connections>
+                                    <action selector="btnResetPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="NQz-P9-Pdp"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="TrM-A2-awu" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="0BU-S9-KUI"/>
+                            <constraint firstItem="mm6-2C-xCj" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="0mj-7f-Fuj"/>
+                            <constraint firstItem="mm6-2C-xCj" firstAttribute="top" secondItem="gx1-Su-hMp" secondAttribute="bottom" constant="235" id="3La-8D-Xj5"/>
+                            <constraint firstItem="TrM-A2-awu" firstAttribute="top" secondItem="mm6-2C-xCj" secondAttribute="bottom" constant="8" id="LLZ-7C-nQR"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="0qb-34-MD5" secondAttribute="leading" id="d2G-d1-gf2"/>
+                            <constraint firstItem="gx1-Su-hMp" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="qcg-tD-hAg"/>
+                            <constraint firstItem="0qb-34-MD5" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="4" id="v5U-ph-Vgt"/>
+                            <constraint firstItem="gx1-Su-hMp" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" id="zIX-eC-exP"/>
+                        </constraints>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <outlet property="btnTapOrHold" destination="TrM-A2-awu" id="eg8-RT-4Xm"/>
+                        <outlet property="lblCounter" destination="mm6-2C-xCj" id="RAS-vp-kBH"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="564.5" y="431.5"/>
+        </scene>
+    </scenes>
+</document>
