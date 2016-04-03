@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, UITextFieldDelegate {
 
     @IBOutlet var inputMealPrice: UITextField!
     @IBOutlet var lblTipP: UILabel!
@@ -19,24 +19,19 @@ class ViewController: UIViewController {
     var tipPercent:Int = 0
     var mealPrice: Double = 0
     
+    let formatter = NSNumberFormatter()
+    
     override func viewDidLoad() {
-        super.viewDidLoad()
-        let tap = UITapGestureRecognizer(target: self, action: #selector(ViewController.dismissKeyboard))
-        self.view.addGestureRecognizer(tap)
+        formatter.numberStyle = .CurrencyStyle
+        addToolBar(inputMealPrice)
     }
 
     @IBAction func sldrMoved(sender: UISlider) {
         calculateTip()
     }
     
-    func dismissKeyboard() {
-        view.endEditing(true)
-        mealPrice = Double(inputMealPrice.text!)!
-        formatInputAmount()
-    }
-    
-    func formatInputAmount(){
-        inputMealPrice.text = "$\(String(format: "%.2f", mealPrice))"
+    func formatInputAmount() {
+        inputMealPrice.text = formatter.stringFromNumber(mealPrice)
         calculateTip()
     }
     
@@ -48,10 +43,35 @@ class ViewController: UIViewController {
         lblTipP.text = "Tip (\(tipPercent)%)"
         
         //Displays Tip In $$
-        lblTotalTip.text = " $\(String(format: "%.2f", tip))"
+        lblTotalTip.text = formatter.stringFromNumber(tip)
         
         //Displays Meal Price + Tip
-        lblTotalPriceIncludeTip.text = "$\(String(format: "%.2f", mealPrice + tip))"
+        lblTotalPriceIncludeTip.text = formatter.stringFromNumber(mealPrice + tip)
+    }
+    
+    
+    func addToolBar(textField: UITextField){
+        let toolBar = UIToolbar()
+        toolBar.barStyle = UIBarStyle.Default
+        toolBar.translucent = true
+        toolBar.tintColor = UIColor(red: 76/255, green: 217/255, blue: 100/255, alpha: 1)
+        
+        var doneButton = UIBarButtonItem(title: "Done", style: UIBarButtonItemStyle.Done, target: self, action: "donePressed")
+        
+        var space = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.FlexibleSpace, target: nil, action: nil)
+        
+        toolBar.setItems([space, doneButton], animated: false)
+        toolBar.userInteractionEnabled = true
+        toolBar.sizeToFit()
+        
+        textField.delegate = self
+        textField.inputAccessoryView = toolBar
+    }
+    
+    func donePressed(){
+        view.endEditing(true)
+        mealPrice = Double(inputMealPrice.text!)!
+        formatInputAmount()
     }
 
 }
