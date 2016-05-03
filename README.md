@@ -39,6 +39,11 @@ All of the projects will be added to this repository as I complete them.
 ![demo6](http://s17.postimg.org/q931wr6tr/Project_6.gif)
 
 
+**Project 7**
+
+[demo7](http://s32.postimg.org/59hk5ryub/Project_7.gif)
+
+
 
 **Notes:**
 - Project 1 & 2: Merged together!

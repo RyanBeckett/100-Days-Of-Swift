@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="5Vd-TL-p5y">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--Project 7-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController storyboardIdentifier="Main" automaticallyAdjustsScrollViewInsets="NO" id="BYZ-38-t0r" customClass="ViewController" customModule="Project_7" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" text="This is my 100 Days/40 Projects of Swift. Glad to see your following the project" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="63D-Qk-rSe">
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="15"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="63D-Qk-rSe" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="6YA-eR-zcC"/>
+                            <constraint firstItem="63D-Qk-rSe" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="840-WL-6bX"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="63D-Qk-rSe" secondAttribute="trailing" constant="-20" id="ZAj-XF-OtZ"/>
+                            <constraint firstItem="63D-Qk-rSe" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-20" id="cml-Eh-u4N"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="63D-Qk-rSe" secondAttribute="bottom" id="pb7-wv-t7d"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Project 7" id="zGL-zo-iOj">
+                        <barButtonItem key="rightBarButtonItem" title="Done" id="1CA-C3-KnY">
+                            <connections>
+                                <action selector="btnDone:" destination="BYZ-38-t0r" id="Al4-wy-367"/>
+                                <segue destination="hiT-wp-Rn7" kind="show" identifier="detail" id="5RR-IZ-668"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <outlet property="typedText" destination="63D-Qk-rSe" id="y8V-dL-ETQ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-36.5" y="209.5"/>
+        </scene>
+        <!--Second View Controller-->
+        <scene sceneID="F1u-x7-cZn">
+            <objects>
+                <viewController storyboardIdentifier="Second" id="hiT-wp-Rn7" customClass="SecondViewController" customModule="Project_7" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Gju-tN-rE2"/>
+                        <viewControllerLayoutGuide type="bottom" id="6br-si-fxw"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="6Tt-2X-oLo">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="If you see this text then it hasn't worked" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="nja-IB-XBz">
+                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="nja-IB-XBz" firstAttribute="leading" secondItem="6Tt-2X-oLo" secondAttribute="leading" id="EG1-Fc-ZwT"/>
+                            <constraint firstAttribute="trailing" secondItem="nja-IB-XBz" secondAttribute="trailing" id="QPW-7S-BNj"/>
+                            <constraint firstItem="nja-IB-XBz" firstAttribute="bottom" secondItem="6br-si-fxw" secondAttribute="top" id="Vxk-Ws-71T"/>
+                            <constraint firstItem="nja-IB-XBz" firstAttribute="top" secondItem="6Tt-2X-oLo" secondAttribute="top" constant="20" symbolic="YES" id="qKp-ai-R0l"/>
+                        </constraints>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <outlet property="onScreenText" destination="nja-IB-XBz" id="gAm-WB-rah"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="h5B-S7-dJ1" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="436.5" y="209.5"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="JJA-TP-XMi">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="5Vd-TL-p5y" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="4tw-su-1N5">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="h3e-F6-0OM"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="2Gn-Se-ur8" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-518.5" y="209.5"/>
+        </scene>
+    </scenes>
+</document>
