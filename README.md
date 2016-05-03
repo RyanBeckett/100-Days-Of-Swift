@@ -41,7 +41,7 @@ All of the projects will be added to this repository as I complete them.
 
 **Project 7**
 
-[demo7](http://s32.postimg.org/59hk5ryub/Project_7.gif)
+![demo7](http://s32.postimg.org/59hk5ryub/Project_7.gif)
 
 
 
