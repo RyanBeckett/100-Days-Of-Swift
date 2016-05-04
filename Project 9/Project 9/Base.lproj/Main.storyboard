@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Project_9" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="l7j-LV-feU">
+                                <rect key="frame" x="20" y="20" width="335" height="601"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lFM-yd-UXy">
+                                <rect key="frame" x="20" y="629" width="335" height="30"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="lightTextColor"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="15"/>
+                                <state key="normal" title="Add Image"/>
+                                <connections>
+                                    <action selector="btnAddImagePressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="4E9-sb-Hr2"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="l7j-LV-feU" firstAttribute="trailing" secondItem="lFM-yd-UXy" secondAttribute="trailing" id="Buu-xa-5kL"/>
+                            <constraint firstItem="lFM-yd-UXy" firstAttribute="top" secondItem="l7j-LV-feU" secondAttribute="bottom" constant="8" symbolic="YES" id="OTL-lK-YpL"/>
+                            <constraint firstItem="l7j-LV-feU" firstAttribute="leading" secondItem="lFM-yd-UXy" secondAttribute="leading" id="PAu-Gl-TPq"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="lFM-yd-UXy" secondAttribute="bottom" constant="8" symbolic="YES" id="TjN-0j-zaZ"/>
+                            <constraint firstItem="l7j-LV-feU" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="4" id="fm8-nc-K3y"/>
+                            <constraint firstItem="l7j-LV-feU" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="n3a-vX-0Kz"/>
+                            <constraint firstItem="l7j-LV-feU" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="zzf-5v-h4K"/>
+                        </constraints>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <outlet property="selectedImage" destination="l7j-LV-feU" id="INB-VA-azr"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="244.5" y="337.5"/>
+        </scene>
+    </scenes>
+</document>
